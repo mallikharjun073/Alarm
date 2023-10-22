@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alaram - Mallikharjun</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  
+  <style>
+  body,.main{
+    height: 100vh;
+} 
+
+.dnone{
+	display:none;
+}
+</style>
+  <body>
+  
+  <div class = "main d-flex justify-content-center align-items-center flex-column">
+	
+	<div class = "h1" id = "currentTime"></div>
+	<audio class = "dnone" controls id = "alarmaudio"loop>
+	  <source src="assets/alarm.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+	</audio>
+	<div class = "d-grid">
+	<input type = "time" id = "timepicker" class="form-control" placeholder="Password">
+	<button type="button" class="btn btn-primary m-3" id = "setAlaramButton">Set Alaram</button>
+	
+	</div>
+	
+	<div id = "alaramsPending" ></div>
+	<div class = "d-flex">
+	<button type="button" class="btn btn-primary m-3 dnone" onclick = "stopAlaram()" id = "stopAlaramButton">Stop Alaram</button>
+	<button type="button" class="btn btn-primary m-3 dnone"  onclick = "snoozetime()" id = "snoozeAlaramButton">Snooze	</button>
+	</div>
+  </div>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	<script src = "assets/js/alarm.js"></script>
+ </body>
+</html>
